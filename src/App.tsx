@@ -12,7 +12,7 @@ interface Advice {
 }
 
 const defaultAdvice: Advice = {
-  id: 0,
+  id: 117,
   advice:
     "It is easy to sit up and take notice, what's difficult is getting up and taking action.",
 }
@@ -22,20 +22,20 @@ const errorAdvice: Advice = {
   advice: "Failed to fetch new advice. Try again later.",
 }
 
-//figure out error and default states
-//loading state (spinning dice?)
-
 const App = () => {
   const [adviceSlip, setAdviceSlip] = useState<Advice>(defaultAdvice)
+  const [loading, setLoading] = useState<boolean>(false)
 
   const updateAdvice = async () => {
     try {
+      setLoading(true)
       const { data } = await axios.get("https://api.adviceslip.com/advice")
       setAdviceSlip(data.slip)
-      console.log(data.slip)
     } catch (error) {
       console.log(error)
       setAdviceSlip(errorAdvice)
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -49,12 +49,12 @@ const App = () => {
           <p className="mt-6 text-2xl sm:text-[28px]/[42px] text-lightCyan text-center">
             "{adviceSlip.advice}"
           </p>
-          <img className="mt-6 sm:mt-8 mb-8" src={patternDividerDesktop} />
+          <img className="mt-6 sm:mt-8 mb-8 select-none" src={patternDividerDesktop} />
           <button
             className="absolute bottom-0 right-1/2 translate-x-1/2 translate-y-1/2 bg-neonGreen rounded-full p-5 hover:shadow-[0px_0px_30px_0px] hover:shadow-neonGreen"
             onClick={updateAdvice}
           >
-            <img src={iconDice} />
+            <img className={loading ? "animate-spin" : ""} src={iconDice} />
           </button>
         </div>
       </main>

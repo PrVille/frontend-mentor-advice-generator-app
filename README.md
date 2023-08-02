@@ -42,7 +42,10 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 ### Useful resources
 
-- []()
+- [Animation](https://tailwindcss.com/docs/animation)
+- [Box Shadow](https://tailwindcss.com/docs/box-shadow)
+- [Advice Slip API](https://api.adviceslip.com/)
+ 
 
 ## Acknowledgements
 
