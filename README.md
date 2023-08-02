@@ -25,7 +25,7 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 ### Links
 
-- Solution URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/advice-generator-app-using-typescript-react-tailwindcss-YB8j3DBbyy](https://www.frontendmentor.io/solutions/advice-generator-app-using-typescript-react-tailwindcss-YB8j3DBbyy)
 - Live Site URL: [https://frontendmentor-advice-generator-app-tau.vercel.app/](https://frontendmentor-advice-generator-app-tau.vercel.app/)
 - All Solutions URL: [https://frontend-mentor-solutions-mu.vercel.app/](https://frontend-mentor-solutions-mu.vercel.app/)
 
